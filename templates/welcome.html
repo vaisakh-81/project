@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome - Insurance Prediction</title>
+    <style>
+        /* Cosmic theme body styling */
+        body {
+            font-family: 'Orbitron', 'Arial', sans-serif;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Starry background effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1" fill="white" opacity="0.8"/><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.6"/><circle cx="80" cy="20" r="0.7" fill="white" opacity="0.7"/></svg>') repeat;
+            animation: twinkle 4s infinite;
+            pointer-events: none;
+        }
+
+        /* Main container */
+        .main-container {
+            background: rgba(26, 26, 46, 0.9);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
+            max-width: 550px;
+            width: 90%;
+            animation: zoomIn 1s ease-out;
+            border: 1px solid #8a2be2;
+        }
+
+        /* Header container */
+        .header-container {
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+            color: #e6e6fa;
+            padding: 25px;
+            border-radius: 20px 20px 0 0;
+            animation: slideInLeft 1.2s ease-out;
+        }
+
+        /* Content container */
+        .content-container {
+            padding: 25px;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        /* Button container */
+        .button-container {
+            padding: 25px;
+            animation: orbitIn 1.8s ease-out;
+        }
+
+        /* Header styling */
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+        }
+
+        /* Paragraph styling */
+        p {
+            color: #b0c4de;
+            font-size: 1.3em;
+            margin: 0 0 25px 0;
+        }
+
+        /* Button styling */
+        button {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #1a1a2e;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-weight: bold;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            transform: scale(1.2) rotate(5deg);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 15px rgba(255, 0, 255, 0.8);
+        }
+
+        /* Button active effect */
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Link styling */
+        a {
+            text-decoration: none;
+        }
+
+        /* Existing animations */
+        @keyframes zoomIn {
+            0% { opacity: 0; transform: scale(0.7); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideInLeft {
+            0% { opacity: 0; transform: translateX(-150px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* New orbit animation */
+        @keyframes orbitIn {
+            0% {
+                opacity: 0;
+                transform: translateX(100px) rotate(360deg) scale(0.5);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateX(-20px) rotate(180deg) scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) rotate(0deg) scale(1);
+            }
+        }
+
+        /* Twinkle animation for stars */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.4; }
+        }
+
+        /* Neon glow animation for button */
+        @keyframes neonGlow {
+            0% { box-shadow: 0 0 10px #ff00ff; }
+            50% { box-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff; }
+            100% { box-shadow: 0 0 10px #ff00ff; }
+        }
+
+        /* Apply neon glow to button */
+        button {
+            animation: neonGlow 1.5s infinite;
+        }
+
+        /* Stop glow on hover */
+        button:hover {
+            animation: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <h1>Welcome to Insurance Cost Prediction</h1>
+        </div>
+        <div class="content-container">
+            <p>Please proceed to input your details</p>
+        </div>
+        <div class="button-container">
+            <a href="/input"><button>Enter Details</button></a>
+        </div>
+    </div>
+</body>
+</html>

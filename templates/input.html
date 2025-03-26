@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome - Insurance Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #1a2e1f; /* Deep forest green background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle texture overlay (leaf-like effect) */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(139, 169, 139, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Main container */
+        .main-container {
+            background-color: rgba(34, 51, 38, 0.95); /* Darker green with transparency */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(139, 169, 139, 0.3); /* Soft green shadow */
+            max-width: 600px;
+            width: 90%;
+            animation: zoomIn 1s ease-out;
+        }
+
+        /* Header container */
+        .header-container {
+            background-color: #2e4a33; /* Slightly lighter green */
+            color: #f0f7f0; /* Off-white text */
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            animation: slideInLeft 1.2s ease-out;
+            border-bottom: 2px solid #8ba98b; /* Muted green underline */
+        }
+
+        /* Content container */
+        .content-container {
+            padding: 20px;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        /* Button container */
+        .button-container {
+            padding: 20px;
+            animation: rotateIn 1.6s ease-out;
+        }
+
+        /* Header styling */
+        h1 {
+            margin: 0;
+            font-size: 2.3em;
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(139, 169, 139, 0.4); /* Green glow */
+        }
+
+        /* Paragraph styling */
+        p {
+            color: #d9e6d9; /* Light green-gray */
+            font-size: 1.2em;
+            margin: 0 0 20px 0;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #6b8e23; /* Olive green */
+            color: #ffffff; /* White text */
+            padding: 12px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-weight: 700;
+            animation: glow 2s infinite; /* Apply glow */
+        }
+
+        /* Button hover effect */
+        button:hover {
